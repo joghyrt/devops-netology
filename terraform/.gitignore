@@ -1,0 +1,29 @@
+# Будет игнорироваться папка .тераформ и все ее содержимое. Папка .терраформ может лежать на любой глубине
+**/.terraform/*
+
+# Будут игнорироваться файлы с расширением tfstate или содержашие в названии .tfstate.
+*.tfstate
+*.tfstate.*
+
+# Будут игнорироваться файлы с именем crash.log
+crash.log
+
+# Будут игнорироваться все файлы с расшерением tfvars
+*.tfvars
+
+# Будут игнорироваться файлы override.tf, override.tf.json и файлы содержащие в имени _override с расшерением .tf и _override.tf с расширением json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Тут можно добавить файлы которые не должны игнорироватсья. Например !example_override.tf должен все равно показывться в unstaged если даже мы напишем в игнор *_override.tf
+#
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+# example: *tfplan*
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc

@@ -1,30 +1,27 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+1. Будет игнорироваться папка .тераформ и все ее содержимое. Папка .терраформ может лежать на любой глубине
 
-### What is this repository for? ###
+    1.1 ***/.terraform/*
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+2. Будут игнорироваться файлы с расширением tfstate или содержашие в названии .tfstate.
 
-### How do I get set up? ###
+    2.1 *.tfstate
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+    2.2.**.tfstate. **
 
-### Contribution guidelines ###
+3. Будут игнорироваться файлы с именем crash.log
 
-* Writing tests
-* Code review
-* Other guidelines
+    3.1 crash.log
 
-### Who do I talk to? ###
+4. Будут игнорироваться все файлы с расшерением tfvars
 
-* Repo owner or admin
-* Other community or team contact
-* Changed
+    4.1 *.tfvars
+
+5. Будут игнорироваться файлы override.tf, override.tf.json и файлы содержащие в имени _override с расшерением .tf и _override.tf с расширением json
+
+    5.1 override.tf, override.tf.json, *_override.tf, *_override.tf.json
+
+6. Тут можно добавить файлы которые не должны игнорироватсья. Например !example_override.tf должен все равно показывться в unstaged если даже мы напишем в игнор *_override.tf
+
+   6.1!example_override.tf
